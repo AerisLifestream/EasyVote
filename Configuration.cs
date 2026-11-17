@@ -18,9 +18,6 @@ public class Configuration : IPluginConfiguration
     public bool ListenYell { get; set; } = true;
     public bool ListenShout { get; set; } = true;
 
-    // ?Voter-Option fake votes
-    public bool TestMode { get; set; } = false;
-
     // Shouted message, [Result] is replaced by the results
     public string ResultTemplate { get; set; } = DefaultTemplate;
 

@@ -40,10 +40,6 @@ Total: 16 voters
 
 Each line is sent as a separate `/sh` message, 1.1 seconds apart. Empty lines are skipped.
 
-### Test mode
-
-Enable **Test mode** to simulate voters on your own: type `?VoterName-Option` in a listened channel (e.g. `?Bob-Lyra`). Test votes are tagged **[TEST]**.
-
 ### Reset
 
 **Reset votes** only works while holding **Ctrl**, to avoid accidents.

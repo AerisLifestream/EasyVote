@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace EasyVote;
 
-public sealed record Vote(string VoterName, int OptionIndex, DateTime Time, bool IsTest);
+public sealed record Vote(string VoterName, int OptionIndex, DateTime Time);
 
 public sealed class VoteSession
 {
@@ -47,8 +47,8 @@ public sealed class VoteSession
         return found;
     }
 
-    // Real vote: "!Option", voter = "First Last@World"
-    public bool TryRegisterRealVote(string voterFullName, string text)
+    // Vote: "!Option", voter = "First Last@World"
+    public bool TryRegisterVote(string voterFullName, string text)
     {
         if (!IsOpen || string.IsNullOrWhiteSpace(voterFullName))
             return false;
@@ -61,34 +61,7 @@ public sealed class VoteSession
         if (index < 0)
             return false;
 
-        votes[$"real:{voterFullName.ToLowerInvariant()}"] = new Vote(voterFullName, index, DateTime.Now, false);
-        return true;
-    }
-
-    // Test vote: "?Voter Name-Option", voter = name in the command
-    public bool TryRegisterTestVote(string text)
-    {
-        if (!IsOpen)
-            return false;
-
-        text = text.Trim();
-        if (!text.StartsWith('?'))
-            return false;
-
-        var body = text[1..];
-        var dash = body.LastIndexOf('-');
-        if (dash <= 0 || dash == body.Length - 1)
-            return false;
-
-        var voter = Spaces.Replace(body[..dash].Trim(), " ");
-        if (voter.Length == 0)
-            return false;
-
-        var index = FindOption(body[(dash + 1)..]);
-        if (index < 0)
-            return false;
-
-        votes[$"test:{voter.ToLowerInvariant()}"] = new Vote(voter, index, DateTime.Now, true);
+        votes[voterFullName.ToLowerInvariant()] = new Vote(voterFullName, index, DateTime.Now);
         return true;
     }
 

@@ -162,14 +162,6 @@ public sealed class MainWindow : Window
 
         var shout = Config.ListenShout;
         if (ImGui.Checkbox("Shout", ref shout)) { Config.ListenShout = shout; Config.Save(); }
-
-        var test = Config.TestMode;
-        if (ImGui.Checkbox("Test mode", ref test)) { Config.TestMode = test; Config.Save(); }
-        if (Config.TestMode)
-        {
-            ImGui.SameLine();
-            ImGui.TextColored(ImGuiColors.DalamudOrange, "Type ?VoterName-Option (e.g. ?Bob-Lyra)");
-        }
     }
 
     // "+" input state
@@ -311,11 +303,6 @@ public sealed class MainWindow : Window
         {
             ImGui.TableNextRow();
             ImGui.TableNextColumn();
-            if (vote.IsTest)
-            {
-                ImGui.TextColored(ImGuiColors.DalamudOrange, "[TEST]");
-                ImGui.SameLine();
-            }
             ImGui.TextUnformatted(vote.VoterName);
             ImGui.TableNextColumn();
             ImGui.TextUnformatted(Session.OptionLabel(vote.OptionIndex));

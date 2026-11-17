@@ -81,11 +81,8 @@ public sealed class Plugin : IDalamudPlugin
             return;
 
         var text = chat.Message.TextValue.Trim();
-
         if (text.StartsWith('!'))
-            Session.TryRegisterRealVote(GetSenderFullName(chat.Sender), text);
-        else if (Configuration.TestMode && text.StartsWith('?'))
-            Session.TryRegisterTestVote(text);
+            Session.TryRegisterVote(GetSenderFullName(chat.Sender), text);
     }
 
     // "First Last@World"
