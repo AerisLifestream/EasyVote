@@ -3,7 +3,7 @@
     "Author": "Aeris Lifestream",
     "Name": "EasyVote",
     "InternalName": "EasyVote",
-    "AssemblyVersion": "1.0.0.0",
+    "AssemblyVersion": "1.0.1.0",
     "Punchline": "Collect audience votes from chat for on-stage contests.",
     "Description": "Open a vote, let the audience type !OptionName in /say, /yell or /shout, and watch the results live. One vote per player, the latest vote counts. Results can be shouted with a custom message.",
     "ApplicableVersion": "any",
@@ -12,7 +12,7 @@
     "DalamudApiLevel": 15,
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": 1794924623,
+    "LastUpdate": 1794925199,
     "DownloadLinkInstall": "https://raw.githubusercontent.com/AerisLifestream/EasyVote/main/latest.zip",
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/AerisLifestream/EasyVote/main/latest.zip",
     "DownloadLinkTesting": "https://raw.githubusercontent.com/AerisLifestream/EasyVote/main/latest.zip"
