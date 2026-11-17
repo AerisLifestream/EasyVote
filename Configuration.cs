@@ -17,6 +17,7 @@ public class Configuration : IPluginConfiguration
     public bool ListenSay { get; set; } = true;
     public bool ListenYell { get; set; } = true;
     public bool ListenShout { get; set; } = true;
+    public bool ListenTell { get; set; } = true;
 
     // Shouted message, [Result] is replaced by the results
     public string ResultTemplate { get; set; } = DefaultTemplate;

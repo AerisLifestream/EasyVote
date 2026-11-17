@@ -162,6 +162,10 @@ public sealed class MainWindow : Window
 
         var shout = Config.ListenShout;
         if (ImGui.Checkbox("Shout", ref shout)) { Config.ListenShout = shout; Config.Save(); }
+        ImGui.SameLine();
+
+        var tell = Config.ListenTell;
+        if (ImGui.Checkbox("Tell", ref tell)) { Config.ListenTell = tell; Config.Save(); }
     }
 
     // "+" input state

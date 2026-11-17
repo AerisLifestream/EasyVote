@@ -26,7 +26,7 @@ Open the window with `/easyvote`.
 
 ### Channels
 
-EasyVote listens to **Say**, **Yell** and **Shout** (each can be toggled). Votes are detected even if the channel is hidden in your chat tabs.
+EasyVote listens to **Say**, **Yell**, **Shout** and incoming **Tells** (each can be toggled). Votes are detected even if the channel is hidden in your chat tabs.
 
 ### Result message
 

@@ -72,6 +72,7 @@ public sealed class Plugin : IDalamudPlugin
         XivChatType.Say => Configuration.ListenSay,
         XivChatType.Yell => Configuration.ListenYell,
         XivChatType.Shout => Configuration.ListenShout,
+        XivChatType.TellIncoming => Configuration.ListenTell,
         _ => false,
     };
 

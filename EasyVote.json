@@ -2,7 +2,7 @@
   "Author": "Aeris Lifestream",
   "Name": "EasyVote",
   "Punchline": "Collect audience votes from chat for on-stage contests.",
-  "Description": "Open a vote, let the audience type !OptionName in /say, /yell or /shout, and watch the results live. One vote per player, the latest vote counts.",
+  "Description": "Open a vote, let the audience type !OptionName in /say, /yell, /shout or by tell, and watch the results live. One vote per player, the latest vote counts.",
   "ApplicableVersion": "any",
   "Tags": [ "vote", "event", "contest", "venue", "chat" ],
   "RepoUrl": "https://github.com/AerisLifestream/EasyVote"
